@@ -48,6 +48,17 @@ logs/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Documentación (excluir del repo, mantener local)
+DEPLOYMENT.md
+EASYPANEL_DEPLOYMENT.md
+GUIA_COMPLETA.md
+PASO_4_COMPLETADO.md
+SETUP.md
+contexto_de_la_aplicacion.md
+plan_de_trabajo.md
+# Mantener README.md en el repo (comentado)
+# README.md
 .tox/
 
 # Jupyter Notebook
