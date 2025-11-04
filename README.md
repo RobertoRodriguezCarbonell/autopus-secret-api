@@ -305,9 +305,42 @@ curl -X DELETE "http://localhost:8000/admin/system/purge" \
   -H "X-API-Key: tu-api-key-admin"
 ```
 
-## 🚀 Deployment
+## 🚀 Deployment en Producción
 
-### Opción 1: Docker (Recomendado)
+**🎯 Deployment rápido en VPS con dominio personalizado**
+
+Ver guía completa: **[DEPLOYMENT.md](./DEPLOYMENT.md)**
+
+### Resumen rápido:
+
+```bash
+# 1. Clonar en el VPS
+git clone https://github.com/RobertoRodriguezCarbonell/autopus-secret-api.git
+cd autopus-secret-api
+
+# 2. Configurar .env con valores de producción
+cp .env.example .env
+nano .env  # Editar con tus valores
+
+# 3. Ejecutar script de deployment
+chmod +x deploy.sh
+./deploy.sh
+
+# 4. Verificar estado
+chmod +x check-status.sh
+./check-status.sh
+```
+
+**URLs en producción:**
+- 🌐 API: https://secret.autopus.es
+- 📚 Docs: https://secret.autopus.es/docs
+- ❤️ Health: https://secret.autopus.es/health
+
+---
+
+## 🐳 Deployment Alternativo con Docker
+
+### Opción 1: Docker (Recomendado para desarrollo)
 
 ```dockerfile
 FROM python:3.11-slim
