@@ -48,6 +48,10 @@ logs/
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+tests/
+test_api.bat
+test_api.ps1
 
 # Documentación (excluir del repo, mantener local)
 DEPLOYMENT.md
@@ -59,7 +63,16 @@ contexto_de_la_aplicacion.md
 plan_de_trabajo.md
 # Mantener README.md en el repo (comentado)
 # README.md
-.tox/
+
+# Scripts de desarrollo local
+check-status.sh
+deploy.sh
+
+# Base de datos local
+database/
+
+# Docker Compose (no usado en Easypanel)
+docker-compose.yml
 
 # Jupyter Notebook
 .ipynb_checkpoints
