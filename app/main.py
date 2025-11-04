@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title=settings.api_title,
     version=settings.api_version,
-    description="API segura para compartir secretos con caducidad automática y acceso único",
+    description="API segura para compartir contraseñas, credenciales, API Keys y otros secrets de forma temporal.",
     docs_url="/docs",
     redoc_url="/redoc",
     lifespan=lifespan,
