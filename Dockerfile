@@ -24,12 +24,11 @@ RUN apt-get update && \
         gcc \
         && rm -rf /var/lib/apt/lists/*
 
-# Copiar requirements y instalar dependencias Python
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copiar todo el código primero
+COPY . .
 
-# Copiar código de la aplicación
-COPY app/ ./app/
+# Instalar dependencias Python
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Crear usuario no-root para ejecutar la app
 RUN useradd -m -u 1000 autopus && \
